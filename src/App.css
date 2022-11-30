@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
-}
+.layout {
+  max-width: 1200px;
+  min-width: 800px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  margin: auto;
 }
+.container {
+  height: 60px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-size: 30px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: space-between; /* 메인축 방향정렬 */
+  align-items: center; /* 수직축 방향 정렬 */
+
+  padding: 0 20px 0 20px;
+
+  border: 1px solid rgb(212, 211, 208);
+  border-radius: 10px;
 }
+.add-style {
+  display: flex;
+  justify-content: space-between;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding: 30px;
+
+  background-color: #fbd7de;
+
+  border: none;
+  border-radius: 10px;
+}
+.inputbox-style {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border: none;
+}
+.label-style {
+  font-size: 20px;
+  font-weight: bold;
+}
+.input-style {
+  width: 250px;
+  height: 40px;
+
+  border: none;
+  border-radius: 10px;
+}
+.app-style {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px; /* flex 아이템들의 간격 설정*/
+
+  padding: 20px;
+}
+.box-style {
+  min-height: 300px; /* 최소높이값을 설정해서 박스들이 다 삭제되어도 Done...!이 올라오지않게 */
+
+  display: flex;
+  flex-wrap: wrap; /* 줄넘김 처리 설정  */
+  gap: 20px;
+}
+.square-style {
+  width: 300px;
+  height: 180px;
+
+  padding: 10px 20px;
+
+  border: 4px solid #ffafbd;
+  border-radius: 10px;
+}
+.button-box {
+  display: flex;
+  gap: 10px;
+
+  margin-top: 20px;
+}
+.button-style {
+  width: 150px;
+  height: 40px;
+
+  font-size: medium;
+  font-weight: bold;
+
   color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: none;
+  border-radius: 10px;
 }
