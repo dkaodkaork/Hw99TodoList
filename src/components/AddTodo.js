@@ -13,7 +13,7 @@ function AddTodo({ todos }) {
       isDone: false,
     };
     if (title && body !== "") {
-      //제목과 내용이 입력되면 todos의 상태변경
+      //제목과 내용이 입력되면 todos의 상태변경/
       setTodos([...todos, newTodo]);
     }
   };
