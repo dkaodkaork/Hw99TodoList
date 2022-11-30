@@ -2,7 +2,7 @@ import CustomButton from "./CustomButton";
 import TodoBox from "./TodoBox";
 
 function Todo({ todo, handleDelte, doneTodo }) {
-  // console.log(props);
+  // console.log(props)
   return (
     <div className="square-style">
       <div>
