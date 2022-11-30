@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Todo from "./Todo";
 
 function TodoBox({ todos, setTodos }) {
-  // console.log(props);
+  // console.log(props)
   const [isDone, setIsDone] = useState(false);
 
   const deleteTodoHandler = (id) => {
