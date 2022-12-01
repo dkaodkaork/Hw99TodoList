@@ -12,7 +12,7 @@
 
   display: flex;
   justify-content: space-between; /* 메인축 방향정렬 */
-  align-items: center; /* 수직축 방향 정렬 */
+  align-items: center; /* 수직축 방향 정렬  */
 
   padding: 0 20px 0 20px;
 
