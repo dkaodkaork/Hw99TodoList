@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CustomButton from "./CustomButton";
 
 function AddTodo({ todos, setTodos }) {
-  // console.log(props);
+  // console.log(props)
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
