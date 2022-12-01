@@ -15,10 +15,11 @@ function Todo({ todo, handleDelte, doneTodo }) {
           onClick={() => handleDelte(todo.id)}
           name="삭제!"
         />
-
         <CustomButton
-          backgroundcolor="#4b6cb7"
-          onClick={() => doneTodo(todo.id)}
+          backgroundcolor={todo.isDone ? "#434343" : "#4b6cb7"}
+          onClick={() => {
+            doneTodo(todo.id);
+          }}
           name={todo.isDone ? "취소" : "완료"}
         />
       </div>

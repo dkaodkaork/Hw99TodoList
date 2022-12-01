@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Todo List 만들기
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 리액트의 props, state, setState훅 등을 활용하여 My Todo List를 만들자
 
-## Available Scripts
+<img width="1135" alt="image" src="https://user-images.githubusercontent.com/87013822/204820007-cef22322-2299-4600-8743-81dc11d62935.png">
 
-In the project directory, you can run:
+## 컴포넌트 분리
 
-### `yarn start`
+1. header 페이지의 header는 공통적으로 재사용될 수 있다고 생각하여 컴포넌트로 따로 분리하였습니다.
+2. AddTodo 사용자가 제목과 내용을 입력하는 부분인데, 가독성과, 다른 페이지에서 재사용될 수 있다고 생각하여 분리하였습니다.
+3. TodoBox 사용자가 입력한 todo 카드들을 props의 상태에 따라 다른 위치에 렌더링 해주는 박스입니다. 재사용과 가독성을 위해 분리하였습니다.
+4. Todo 사용자가 입력한 정보들을 보여주는 카드 입니다. 재사용과 가독성을 위해 분리하였습니다.
+5. 사용하는 버튼들이 많아 버튼의 스타일과 이름등을 데이터로 주고받아 사용하기 위한 컴포넌트입니다. 재사용과 가독성을 위해 분리하였습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 과제중 시행착오, 진행과정
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+과제에 주어진 View를 보고 전체적인 스케치를 해야겠다고 생각.
+전체 Layout을 바탕으로 컴포넌트 별로 나눔(기능전 html과 css부분만)
+이제 컴포넌트 별로 각기능을 알맞게 추가하고 props, state 개념과 useState를 이용해보자! 했는데, React강의 에서는
+App.js 파일 한곳에 모든 코드를 작성하고, component를 떼어내는 식으로 경험을 했었는데, 컴포넌트를 먼저 분리하고 작업을 하려니
+props로 어떻게 어디서 누구한테 데이터를 보내줘야하며, 어떤 상태를 관리해야하는지 어려움이 많았다.
+일단 보여지는 부분은 만들어놨으니 다시 한번 강의를 보면서 App.js 한 파일에 기능들을 추가하였고 한페이지 안에서 기능구현이 다가능한 상태가 되니,
+컴포넌트를 분리 할 수 있었다.
 
-### `yarn test`
+<img width="620" alt="image" src="https://user-images.githubusercontent.com/87013822/204812935-1e74ca96-a8ba-405c-9573-7c62cae957af.png">
+<img width="560" alt="image" src="https://user-images.githubusercontent.com/87013822/204813333-9c21c381-8065-4c03-9693-ba9d5c22d0ac.png">
+완료와 취소 기능을 구현함에 있어서 todos안에 있는 isDone 값을 변경하여 렌더링을 시켰어야 했는데, isDone의 상태를 따로 관리를 해줘야한다고 생각했고,
+위와 같이 코드를 작성한결과 작동하는데 문제는 없었지만, 클릭을 2번해야 원하는 기능이 작동되는 문제가 발생했다.
+결론적으로 isDone의 상태를 따로 관리할 필요가 없었으며, todos안의 요소 isDone과 따로 상태관리를 위해 선언한 isDone 객체는 다른 데이터였고,
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 이 상황을 해결하는 과정에서 크게 3가지를 알게 되었다.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+첫번째로, setState는 비동기적으로 일어난다.
+두번째로, setState 상태변경은 바로 일어나지 않는다.(React가 브라우저 이벤트가 끝날 시점에 state를 일괄적으로 업데이트하기 때문에) 다음스텝을 생각해서 코드를 작성해보자.
+세번째로, 상태관리는 꼭 해야하는 것들만 하자.

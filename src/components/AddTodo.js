@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import CustomButton from "./CustomButton";
 
-function AddTodo({ todos }) {
+function AddTodo({ todos, setTodos }) {
+  // console.log(props);
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
@@ -12,8 +13,8 @@ function AddTodo({ todos }) {
       body: body,
       isDone: false,
     };
-    if (title && body !== "") {
-      //제목과 내용이 입력되면 todos의 상태변경//
+
+    if (title && body) {
       setTodos([...todos, newTodo]);
     }
   };

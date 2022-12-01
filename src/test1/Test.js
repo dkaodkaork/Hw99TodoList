@@ -32,13 +32,13 @@ const App = () => {
   }; //delete를 핸들할 꺼면 이런이름을 써라 하고 props로 사용할 곳에 핸들러를 넘겨줘야한다
 
   const doneTodoHandler = (id) => {
-    setIsDone(!isDone);
+    // setIsDone(!isDone);
     //https://ko.reactjs.org/docs/faq-state.html setState 2회
     const doneTodo = todos.map((todo) => {
       if (todo.id === id) {
         return {
           ...todo,
-          isDone: isDone,
+          isDone: !todo.isDone, //!todo.isDone,
         };
       } else {
         return {
