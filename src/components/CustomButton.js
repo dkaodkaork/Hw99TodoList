@@ -1,5 +1,5 @@
 function CustomButton({ backgroundcolor, onClick, name }) {
-  // console.log(props);
+  // console.log(props)
   return (
     <button
       style={{
