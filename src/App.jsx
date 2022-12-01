@@ -1,7 +1,6 @@
-import React, { useState, useSyncExternalStore } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
-import CustomButton from "./components/CustomButton";
 import TodoBox from "./components/TodoBox";
 import AddTodo from "./components/AddTodo";
 
