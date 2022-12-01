@@ -3,7 +3,7 @@ import Todo from "./Todo";
 
 function TodoBox({ todos, setTodos }) {
   // console.log(props)
-  // const [isDone, setIsDone] = useState(false);
+  // const [isDone, setIsDone] = useState(false)
 
   const deleteTodoHandler = (id) => {
     const newTodoList = todos.filter((todo) => todo.id !== id);
